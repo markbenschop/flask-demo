@@ -15,12 +15,8 @@ def hello_world():
         my_name = os.environ['NAME']
     except KeyError:
         my_name = None
-    try :
-        my_var = os.environ['MY_VAR']
-    except KeyError:
-        my_var = None
 
-    return render_template('hello.html', message=message, hostname=hostname, time=time , my_name=my_name, my_var=my_var)
+    return render_template('hello.html', message=message, hostname=hostname, time=time , my_name=my_name)
 
 
 if __name__ == '__main__':
