@@ -12,30 +12,27 @@
 
 <div style="background-color:light-grey,text-color:red,padding:20px" align="center">
 {% if message %}
-    {{ message }} !! <br>
+    {{ message }} !! <br><br>
 {% else %}
     No message set<br>
 {% endif %}
 
-{% if my_name %}
-    I am {{ my_name }}
-{% endif %}
-
 {% if hostname %}
-   on {{ hostname }}
+   This is container : <b>{{ hostname }}</b> <br>
 {% endif %}
 
 {% if time %}
-    <br>the time is {{ time }}<br>
+    The time is <b>{{ time }}</b><br>
 {% else %}
-    <br>the time is unknown <br>
+    I don't know what the time is <br>
 {% endif %}
 
-{% if my_var %}
-    my_var : {{ my_var }} <br>
+{% if my_name %}
+    My name is <b>{{ my_name }}</b> <br>
 {% else %}
-    my_var not set <br>
+    I don't know my name <br>
 {% endif %}
+
 </div>
 </body>
 </html>
