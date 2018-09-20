@@ -7,7 +7,7 @@ spec:
   selector:
     app: flask-demo-deployment
   ports:
-    - name: flask_port
+    - name: flask
       protocol: TCP
       port: 80
       targetPort: 5000
