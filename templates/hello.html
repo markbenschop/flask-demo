@@ -12,28 +12,41 @@
 <br>
 
 <div style="background-color:light-grey,text-color:red,padding:20px" align="center">
+<table>
 {% if message %}
-    {{ message }} !! <br><br>
+    <tr>
+        <td colspan="2">{{ message }} !!</td>
+    </tr>
 {% else %}
-    No message set<br>
+    <tr>
+        <td colspan="2">No message set</td>
+    </tr>
 {% endif %}
 
 {% if hostname %}
-   This is container : <b>{{ hostname }}</b> <br>
+    <tr>
+        <th>This is container :</th> <td>{{ hostname }}</td>
+    </tr>
 {% endif %}
 
 {% if time %}
-    The time is <b>{{ time }}</b><br>
+    <tr>
+        <th>The time is </th> <td>{{ time }}</b></td>
+    </tr>
 {% else %}
-    I don't know what the time is <br>
+    <tr>
+        <td colspan="2"> I don't know what the time is </td>>
+    </tr>
 {% endif %}
 
 {% if my_name %}
-    My name is <b>{{ my_name }}</b> <br>
+    <tr>
+        <th>My name is </th> <td>{{ my_name }}</b> </td>
+    </tr>
 {% else %}
     I don't know my name <br>
 {% endif %}
-
+</table>
 </div>
 </body>
 </html>
