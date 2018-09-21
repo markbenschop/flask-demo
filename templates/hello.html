@@ -25,13 +25,13 @@
 
 {% if hostname %}
     <tr>
-        <th>This is container :</th> <td>{{ hostname }}</td>
+        <th align="left">This is container :</th> <td>{{ hostname }}</td>
     </tr>
 {% endif %}
 
 {% if time %}
     <tr>
-        <th>The time is </th> <td>{{ time }}</b></td>
+        <th align="left">The time is :</th> <td>{{ time }}</b></td>
     </tr>
 {% else %}
     <tr>
@@ -41,7 +41,7 @@
 
 {% if my_name %}
     <tr>
-        <th>My name is </th> <td>{{ my_name }}</b> </td>
+        <th align="left">My name is :</th> <td>{{ my_name }}</b> </td>
     </tr>
 {% else %}
     I don't know my name <br>
