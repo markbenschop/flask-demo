@@ -23,4 +23,21 @@ spec:
         envFrom:
         - configMapRef:
             name: flask-demo-environment
+        resource:
+          # mem 15-20Mi           # Mi = Mebibytes
+          # cpu 100-250 millicore # 1 core = 1000m
+          request:
+            # Initial request
+            memory: "15Mi"
+            cpu: "100m"
+            # Hard limit
+          limits:  
+            memory: "20Mi"
+            cpu: "250m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 5000
+          initialDelaySeconds: 10
+          timeoutSeconds: 5
       restartPolicy: Always
