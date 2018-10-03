@@ -46,6 +46,13 @@
 {% else %}
     I don't know my name <br>
 {% endif %}
+{% if version %}
+    <tr>
+        <th align="left">Flask-demo version is :</th> <td>{{ version }}</b> </td>
+    </tr>
+{% else %}
+    Unknown version <br>
+{% endif %}
 </table>
 </div>
 </body>
