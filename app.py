@@ -8,16 +8,22 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    message = 'Hello world !'
-    version = 0.9
+    #
+    version = 0.17
     hostname = socket.gethostname()
     time = datetime.datetime.now()
+    message = 'Goodbye and thanks for all the fish!'
     try:
-        my_name = os.environ['NAME']
+        name = os.environ['NAME']
     except KeyError:
-        my_name = None
-
-    return render_template('hello.html', message=message, hostname=hostname, time=time , my_name=my_name)
+        name = 'Flask-demo'
+    name = 'Mark'
+    return render_template('hello.html',
+                           message=message,
+                           hostname=hostname,
+                           time=time ,
+                           version=version,
+                           name=name)
 
 
 if __name__ == '__main__':

@@ -13,25 +13,26 @@
 
 <div style="background-color:light-grey,text-color:red,padding:20px" align="center">
 <table>
-{% if message %}
+
+{% if version %}
     <tr>
-        <td colspan="2">{{ message }} !!</td>
+        <th align="left">Flask-demo version </th> <td>{{ version }}</td>
     </tr>
 {% else %}
     <tr>
-        <td colspan="2">No message set</td>
+        <td colspan="2">Unknown version </td>
     </tr>
 {% endif %}
 
 {% if hostname %}
     <tr>
-        <th align="left">This is container :</th> <td>{{ hostname }}</td>
+        <th align="left">This is container </th> <td>{{ hostname }}</td>
     </tr>
 {% endif %}
 
 {% if time %}
     <tr>
-        <th align="left">The time is :</th> <td>{{ time }}</b></td>
+        <th align="left">The time is </th> <td>{{ time }}</td>
     </tr>
 {% else %}
     <tr>
@@ -39,19 +40,24 @@
     </tr>
 {% endif %}
 
-{% if my_name %}
+{% if name %}
     <tr>
-        <th align="left">My name is :</th> <td>{{ my_name }}</b> </td>
+        <th align="left">My name is </th> <td>{{ name }}</td>
     </tr>
 {% else %}
-    I don't know my name <br>
+    <tr>
+        <th align="left">My name is </th><td> Flask-demo </td>
+    </tr>
 {% endif %}
-{% if version %}
+
+{% if message %}
     <tr>
-        <th align="left">Flask-demo version is :</th> <td>{{ version }}</b> </td>
+        <th align="left">Message :</th> <td>{{ message }}</td>
     </tr>
 {% else %}
-    Unknown version <br>
+    <tr>
+        <th align="left">Message :</th><td> Hello, world !</td>
+    </tr>
 {% endif %}
 </table>
 </div>
