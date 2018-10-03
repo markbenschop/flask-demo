@@ -9,6 +9,7 @@ Install a debian 9 vm with an administrative user, e.g. username
 Log in to the vm with your user account.
 Su to root
 To configure the vm clone this git repository
+
    git clone https://github.com/markbenschop/debian-kubeadm.git
 
 Run the following scripts.
