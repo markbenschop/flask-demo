@@ -23,10 +23,10 @@ spec:
         envFrom:
         - configMapRef:
             name: flask-demo-environment
-        resource:
+        resources:
           # mem 15-20Mi           # Mi = Mebibytes
           # cpu 100-250 millicore # 1 core = 1000m
-          request:
+          requests:
             # Initial request
             memory: "15Mi"
             cpu: "100m"
