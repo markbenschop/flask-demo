@@ -1,8 +1,0 @@
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: flask-demo-environment
-  namespace: default
-data:
-  NAME: Mark
