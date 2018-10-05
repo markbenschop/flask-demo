@@ -1,0 +1,7 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flask-demo-environment
+data:
+  NAME: 'IVSNext'

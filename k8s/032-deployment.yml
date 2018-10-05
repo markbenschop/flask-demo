@@ -1,0 +1,43 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-demo-deployment
+  labels:
+    app: flask-demo-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-demo
+  template:
+    metadata:
+      labels:
+        app: flask-demo
+    spec:
+      containers:
+      - name: flask-demo-container
+        image: markbenschop/flask-demo:0.16
+        ports:
+        - containerPort: 5000
+        envFrom:
+        - configMapRef:
+            name: flask-demo-environment
+        resources:
+          # mem 15-20Mi           # Mi = Mebibytes
+          # cpu 100-250 millicore # 1 core = 1000m
+          requests:
+            # Initial request
+            memory: "15Mi"
+            cpu: "100m"
+            # Hard limit
+          limits:  
+            memory: "20Mi"
+            cpu: "250m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 5000
+          initialDelaySeconds: 10
+          timeoutSeconds: 5
+      restartPolicy: Always
