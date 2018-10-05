@@ -7,6 +7,7 @@ spec:
   selector:
     app: select_me
   ports:
+    # Please note that ports must be between 30000 -32000
     - protocol: TCP
       port: 80
       name: web
