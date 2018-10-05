@@ -7,10 +7,10 @@ Each request will return a different hostname when loadbalanced properly.
 An environment variables can be set :   
 NAME   
 This name will be displayed when this variable is set.   
-This can be used to demonstrate the use of a kubenetes configMap.  
+This can be used to demonstrate the use variabels or a kubenetes configMap.  
 Example service, deployment and configmapfiles can be found in k8s directory.
 
 The app itself listens on port 5000.   
 Run the container with e.g. :
 
-    docker run --name flask-demo -p8080:5000 -e NAME='Mark'  flask-demo:0.2
+    docker run --name flask-demo -p8080:5000 -e NAME='Mark'  flask-demo:0.16
