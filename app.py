@@ -9,10 +9,10 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     #
-    version = 0.17
+    version = 1.3
     hostname = socket.gethostname()
     time = datetime.datetime.now()
-    message = 'Goodbye and thanks for all the fish!'
+    message = 'Goodbye and thanks for the pizza ! :D'
     try:
         name = os.environ['NAME']
     except KeyError:
