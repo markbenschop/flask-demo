@@ -1,0 +1,14 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: flask-demo-external-service
+spec:
+  selector:
+    app: flask-demo
+  ports:
+    - protocol: TCP
+      port: 80
+      name: web
+      nodePort: 30090
+  type: NodePort

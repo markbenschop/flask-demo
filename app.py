@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     #
-    version = 1.3
+    version = 1.5
     hostname = socket.gethostname()
     time = datetime.datetime.now()
     message = 'Goodbye and thanks for the pizza ! :D'
