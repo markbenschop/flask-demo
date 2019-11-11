@@ -3,6 +3,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: flask-demo-service
+  namespace: demo
 spec:
   selector:
     app: flask-demo

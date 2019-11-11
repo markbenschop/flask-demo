@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-demo-deployment
+  namespace: demo
   labels:
     app: flask-demo-deployment
 spec:
@@ -24,13 +25,9 @@ spec:
         - configMapRef:
             name: flask-demo-environment
         resources:
-          # mem 15-20Mi           # Mi = Mebibytes
-          # cpu 100-250 millicore # 1 core = 1000m
           requests:
-            # Initial request
             memory: "15Mi"
             cpu: "100m"
-            # Hard limit
           limits:  
             memory: "20Mi"
             cpu: "250m"
