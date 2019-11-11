@@ -10,7 +10,7 @@ spec:
         http:
           paths:
           - backend:
-              serviceName: flask-demo
+              serviceName: flask-demo-service
               servicePort: web
             path: /flask-demo
 
