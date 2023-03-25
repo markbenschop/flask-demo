@@ -3,14 +3,13 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: flask-demo-ingress
-  namespace: demo
+  annotations:
+      traefik.frontend.rule.type: PathPrefixStrip
 spec:
   rules:
-      - host: mark.omen.intern
-        http:
-          paths:
-          - backend:
-              serviceName: flask-demo-service
-              servicePort: 80
-            path: /flask-demo
-
+  - http:
+      paths:
+      - backend:
+          serviceName: flask-demo-service
+          servicePort: 80
+        path: /flask-demo
