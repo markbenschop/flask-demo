@@ -13,4 +13,3 @@ spec:
           serviceName: flask-demo-service
           servicePort: 80
         path: /flask-demo
-
